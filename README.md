@@ -12,7 +12,7 @@ Utilizando HTML+JS+CSS+BOOSTRAP desarrollar una aplicación web que permita admi
   -Contar con una opción que permita eliminar contactos de manera individual   
   -Mostrar un listado ordenado alfabéticamente o por edad de todos los contactos
 
-##IMPORTANTE
+## IMPORTANTE
 
   -El programa debe mostrar la aplicación correcta de los conceptos del paradigma de la programación orientada a objetos y las buenas prácticas de programación.
   -Incluir mensajes de información, advertencia o error cuando sea necesario. 
