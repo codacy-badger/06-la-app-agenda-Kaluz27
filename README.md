@@ -8,7 +8,7 @@
 
 Utilizando HTML+JS+CSS+BOOSTRAP desarrollar una aplicación web que permita administrar una agenda de contactos. La agenda deberá
 
-* Contar con una opción que permita agregar un nuevo contacto.
+  * Contar con una opción que permita agregar un nuevo contacto.
 * Contar con una opción que permita eliminar contactos de manera individual.   
 * Mostrar un listado ordenado alfabéticamente o por edad de todos los contactos.
 
