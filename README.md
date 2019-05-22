@@ -18,7 +18,6 @@ Utilizando HTML+JS+CSS+BOOSTRAP desarrollar una aplicación web que permita admi
 *El programa se entregará en un repositorio en GitHub el cual deberá mostrar un historial de las actualizaciones realizadas. durante el desarrollo, es decir no podrán tener solamente 1 o 2 commits. Deberán ser varios y distribuidos en el espacio de tiempo dedicado a la actividad.
 *Los repositorios que no cumplan con esta última disposición recibirán en automático una calificación de 0 puntos.
 
-
 ### Paso 1
 
 Implementar la interfaz (GUI) que utilizará la agenda
