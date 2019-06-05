@@ -1,8 +1,35 @@
-import Contacto from "./Contacto.js"
-import Agenda from "./Contacto.js"
-import ViewWeb from "./ViewWeb.js"
-export default class Main{
-    constructor(){
+import Agenda from "./agenda.js";
+import Contacto from "./contacto.js";
+//.
+class Main {
+  constructor() {
+    let agenda = new Agenda();
 
-    }
+    document.querySelector("#btnAdd").addEventListener("click", () => {
+      let form = document.querySelector("#form");
+
+      if (form.checkValidity() === true) {
+        let name = document.querySelector("#name").value;
+        let email = document.querySelector("#email").value;
+        let sBirthday = document.querySelector("#birthday").value;
+        sBirthday = sBirthday.split("-");
+
+        let birthday = new Date(sBirthday[0], sBirthday[1] - 1, sBirthday[2]);
+
+        let objEmployee = {
+          name: name,
+          email: email,
+          birthday: birthday
+        };
+
+        let contacto = new Contacto(objEmployee);
+
+        agenda.addContact(contacto);
+      }
+
+      form.classList.add("was-validated");
+    });
+  }
 }
+
+let m = new Main();

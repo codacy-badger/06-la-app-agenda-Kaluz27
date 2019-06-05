@@ -6,6 +6,9 @@
 
 ## Instrucciones
 
+Calificación CODACY
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dd826376fdae462281af28a7f7dd69c6)](https://www.codacy.com/app/Hugoneytor/06-la-app-agenda-Hugoneytor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=POO-2019-2J/06-la-app-agenda-Hugoneytor&amp;utm_campaign=Badge_Grade)
+
 Utilizando HTML+JS+CSS+BOOSTRAP desarrollar una aplicación web que permita administrar una agenda de contactos. La agenda deberá
 
 *Contar con una opción que permita agregar un nuevo contacto.
