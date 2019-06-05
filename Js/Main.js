@@ -1,6 +1,6 @@
 import Contacto from "./Contacto.js";
 import Agenda from "./Agenda.js";
-
+//un intento diferente:
 export default class Main {
     constructor() {
         let agenda = new Agenda();

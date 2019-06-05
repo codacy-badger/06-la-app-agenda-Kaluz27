@@ -1,6 +1,6 @@
 import Contacto from "./Contacto.js";
 import Agenda from "./Agenda.js";
-
+//Intento de salvación xD
 
 export default class VistaWeb {
     constructor(tablaInformacion) {
