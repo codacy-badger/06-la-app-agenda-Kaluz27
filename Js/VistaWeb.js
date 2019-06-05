@@ -23,7 +23,7 @@ export default class VistaWeb {
     enseñar(contactos) {
         this._tablaInformacion.innerHTML = "";
         contactos.forEach((contacto, index) => {
-            this._addToTable(new Contacto(contacto))
+            this._addToTable(new Contacto(contacto));
         });
     }
 
