@@ -1,35 +1,25 @@
-import Agenda from "./agenda.js";
-import Contacto from "./contacto.js";
-//.
-class Main {
-  constructor() {
-    let agenda = new Agenda();
+import Contacto from "./Contacto.js";
+import Agenda from "./Agenda.js";
 
-    document.querySelector("#btnAdd").addEventListener("click", () => {
-      let form = document.querySelector("#form");
+export default class Main{
+    constructor(){
+        let agenda = new Agenda();
 
-      if (form.checkValidity() === true) {
-        let name = document.querySelector("#name").value;
-        let email = document.querySelector("#email").value;
-        let sBirthday = document.querySelector("#birthday").value;
-        sBirthday = sBirthday.split("-");
-
-        let birthday = new Date(sBirthday[0], sBirthday[1] - 1, sBirthday[2]);
-
-        let objEmployee = {
-          name: name,
-          email: email,
-          birthday: birthday
-        };
-
-        let contacto = new Contacto(objEmployee);
-
-        agenda.addContact(contacto);
-      }
-
-      form.classList.add("was-validated");
-    });
-  }
+        document.querySelector("#btnAdd").addEventListener("click",()=>{
+            let nombre = document.querySelector("#nombre").value;
+            let correo = document.querySelector("#correo").value;
+            let sfechaNacimiento = document.querySelector("#fechaNacimiento").value;
+            sfechaNacimiento = sfechaNacimiento.split("-");
+            let fechaNacimiento = new Date(sfechaNacimiento[0], sfechaNacimiento[1]-1, sfechaNacimiento[2]);
+           
+            let objContacto = {
+                nombre: nombre,
+                correo: correo,
+                fechaNacimiento: fechaNacimiento
+            };
+            let contacto = new Contacto(objContacto);
+            agenda.añadirPersona(contacto);
+        })
+    }
 }
-
 let m = new Main();

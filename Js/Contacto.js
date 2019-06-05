@@ -1,80 +1,44 @@
-export default class Contacto {
-  constructor(contacto) {
-    this._name = contacto.name.toUpperCase();
-    this._email = contacto.email;
-    this._birthday = new Date(contacto.birthday);
-    this._months = [
-      "Ene",
-      "Feb",
-      "Mar",
-      "Abr",
-      "May", //.
-      "Jun",
-      "Jul",
-      "Ago",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dic"
-    ];
+export default class Contacto{
+  constructor(contacto){
+      this._nombre = contacto.nombre.toUpperCase();
+      this._correo = contacto.correo;
+      this._fechaNacimiento = new Date(contacto.fechaNacimiento);
+      this._meses = [
+          "Ene",
+          "Feb",
+          "Mar",
+          "Abr",
+          "May",
+          "Jun",
+          "Jul",
+          "Ago",
+          "Sept",
+          "Oct",
+          "Nov",
+          "Dic"
+      ];
   }
 
-  get name() {
-    return this._name;
+  get nombre(){
+      return this._nombre;
+  }
+  get correo(){
+      return this._correo;
+  }
+  get fechaNacimiento(){
+      return  this._fechaNacimiento;
+  }
+  get fechaNacimientoString(){
+      let fecha = this._fechaNacimiento.getDate() + "/" + this._meses[this._fechaNacimiento.getMonth()] + "/" + this._fechaNacimiento.getFullYear();
+      return fecha;
   }
 
-  get email() {
-    return this._email;
+  getEdad(){
+      let unDia = 24 * 60 * 60 * 1000;
+      let unAño = unDia * 365;
+      let diferenciaMS = new Date() - this._fechaNacimiento;
+      let edad = Math.trunc(diferenciaMS / unAño);
+      return edad;
   }
 
-  get birthday() {
-    return this._birthday;
-  }
-
-  _fixNumber(number){
-    let result = number.toString();
-
-    
-    if(result.length === 1){
-      result = "0" + result;
-    }
-    return result;
-  }
-
-  getBirthdayAsUSString(){
-    let month = this._fixNumber(this._birthday.getMonth()+1);
-
-
-    let day = this._fixNumber(this._birthday.getDate());
-
-    day = day.toString();
-    if(day.length === 1){
-      day = "0" + day;
-    }
-
-    let date = this._birthday.getFullYear() + "-" + month + "-" + day;
-
-    
-    return date;
-  }
-
-  getBirthdayAsString() {
-    let date =
-      this._birthday.getDate() +
-      "/" +
-      this._months[this._birthday.getMonth()] +
-      "/" +
-      this._birthday.getFullYear();
-
-    return date;
-  }
-
-  getAge() {
-    let oneDay = 24 * 60 * 60 * 1000;
-    let oneYear = oneDay * 365;
-    let differenceMs = new Date() - this._birthday;
-    let age = Math.trunc(differenceMs / oneYear);
-
-    return age;
-  }
 }
