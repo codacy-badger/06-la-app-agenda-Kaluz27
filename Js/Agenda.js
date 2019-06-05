@@ -45,15 +45,15 @@ export default class Agenda {
         });
         return result;
     }
-    _ordenarPersonas(){
-        function comparar(x,z){
-            if ( x.nombre < z.nombre ){
+    _ordenarPersonas() {
+        function comparar(x, z) {
+            if (x.nombre < z.nombre) {
                 return -1;
-              }
-              if ( x.nombre > z.nombre){
+            }
+            if (x.nombre > z.nombre) {
                 return 1;
-              }
-              return 0
+            }
+            return 0;
         }
         this._contactos.sort(comparar);
     }
@@ -82,5 +82,5 @@ export default class Agenda {
             title: "Correcto",
             text: `El usuario se ha registrado correctamente con el correo de: ${contacto.correo}`
         });
-    }    
+    }
 }
